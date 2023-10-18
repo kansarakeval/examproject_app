@@ -17,7 +17,7 @@ class _EditScreenState extends State<EditScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             "Add Data Student",
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
@@ -26,44 +26,44 @@ class _EditScreenState extends State<EditScreen> {
         ),
         body: SizedBox(
           child: ListView(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             children: [
               TextFormField(
                 controller: txtgrid,
-                style: TextStyle(fontSize: 15),
+                style: const TextStyle(fontSize: 15),
                 decoration: InputDecoration(
                     fillColor: Colors.blue.shade50,
                     hintText: "Enter grid",
                     filled: true,
                     border: InputBorder.none),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               TextFormField(
                 controller: txtname,
                 keyboardType: TextInputType.name,
-                style: TextStyle(fontSize: 15),
+                style: const TextStyle(fontSize: 15),
                 decoration: InputDecoration(
                     fillColor: Colors.blue.shade50,
                     hintText: "Enter Name",
                     filled: true,
                     border: InputBorder.none),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               TextFormField(
                 controller: txtstd,
                 keyboardType: TextInputType.number,
-                style: TextStyle(fontSize: 15),
+                style: const TextStyle(fontSize: 15),
                 decoration: InputDecoration(
                     fillColor: Colors.blue.shade50,
                     hintText: "Enter std",
                     filled: true,
                     border: InputBorder.none),
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               ElevatedButton(
                 onPressed: () {
                   Map m1={
@@ -74,7 +74,7 @@ class _EditScreenState extends State<EditScreen> {
                   Global.g1.studentList.add(m1);
                   Navigator.pop(context, [txtgrid.text, txtname.text,txtstd.text]);
                 },
-                child: Text("submit"),
+                child: const Text("submit"),
               ),
             ],
           ),
